@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tcm.diagnosis.mapper.DiagnosisMapper">
+  <resultMap id="BaseResultMap" type="com.tcm.diagnosis.model.Diagnosis">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="answer1" jdbcType="VARCHAR" property="answer1" />
+    <result column="answer2" jdbcType="VARCHAR" property="answer2" />
+    <result column="answer3" jdbcType="VARCHAR" property="answer3" />
+    <result column="answer4" jdbcType="VARCHAR" property="answer4" />
+    <result column="answer5" jdbcType="VARCHAR" property="answer5" />
+    <result column="answer6" jdbcType="VARCHAR" property="answer6" />
+    <result column="answer7" jdbcType="VARCHAR" property="answer7" />
+    <result column="answer8" jdbcType="VARCHAR" property="answer8" />
+    <result column="answer9" jdbcType="VARCHAR" property="answer9" />
+    <result column="answer10" jdbcType="VARCHAR" property="answer10" />
+    <result column="answer11" jdbcType="VARCHAR" property="answer11" />
+    <result column="answer12" jdbcType="VARCHAR" property="answer12" />
+    <result column="answer13" jdbcType="VARCHAR" property="answer13" />
+    <result column="answer14" jdbcType="VARCHAR" property="answer14" />
+    <result column="answer15" jdbcType="VARCHAR" property="answer15" />
+    <result column="answer16" jdbcType="VARCHAR" property="answer16" />
+    <result column="answer17" jdbcType="VARCHAR" property="answer17" />
+    <result column="answer18" jdbcType="VARCHAR" property="answer18" />
+    <result column="answer19" jdbcType="VARCHAR" property="answer19" />
+    <result column="answer20" jdbcType="VARCHAR" property="answer20" />
+    <result column="answer21" jdbcType="VARCHAR" property="answer21" />
+    <result column="answer22" jdbcType="VARCHAR" property="answer22" />
+    <result column="answer23" jdbcType="VARCHAR" property="answer23" />
+    <result column="answer24" jdbcType="VARCHAR" property="answer24" />
+    <result column="answer25" jdbcType="VARCHAR" property="answer25" />
+    <result column="answer26" jdbcType="VARCHAR" property="answer26" />
+    <result column="answer27" jdbcType="VARCHAR" property="answer27" />
+    <result column="answer28" jdbcType="VARCHAR" property="answer28" />
+    <result column="answer29" jdbcType="VARCHAR" property="answer29" />
+    <result column="answer30" jdbcType="VARCHAR" property="answer30" />
+    <result column="answer31" jdbcType="VARCHAR" property="answer31" />
+    <result column="answer32" jdbcType="VARCHAR" property="answer32" />
+    <result column="answer33" jdbcType="VARCHAR" property="answer33" />
+    <result column="answer34" jdbcType="VARCHAR" property="answer34" />
+    <result column="answer35" jdbcType="VARCHAR" property="answer35" />
+    <result column="answer36" jdbcType="VARCHAR" property="answer36" />
+    <result column="answer37" jdbcType="VARCHAR" property="answer37" />
+    <result column="answer38" jdbcType="VARCHAR" property="answer38" />
+    <result column="answer39" jdbcType="VARCHAR" property="answer39" />
+    <result column="answer40" jdbcType="VARCHAR" property="answer40" />
+    <result column="answer41" jdbcType="VARCHAR" property="answer41" />
+    <result column="answer42" jdbcType="VARCHAR" property="answer42" />
+    <result column="answer43" jdbcType="VARCHAR" property="answer43" />
+    <result column="answer44" jdbcType="VARCHAR" property="answer44" />
+    <result column="answer45" jdbcType="VARCHAR" property="answer45" />
+    <result column="answer46" jdbcType="VARCHAR" property="answer46" />
+    <result column="answer47" jdbcType="VARCHAR" property="answer47" />
+    <result column="answer48" jdbcType="VARCHAR" property="answer48" />
+    <result column="answer49" jdbcType="VARCHAR" property="answer49" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, 
+    answer10, answer11, answer12, answer13, answer14, answer15, answer16, answer17, answer18, 
+    answer19, answer20, answer21, answer22, answer23, answer24, answer25, answer26, answer27, 
+    answer28, answer29, answer30, answer31, answer32, answer33, answer34, answer35, answer36, 
+    answer37, answer38, answer39, answer40, answer41, answer42, answer43, answer44, answer45, 
+    answer46, answer47, answer48, answer49
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from diagnosis
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from diagnosis
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tcm.diagnosis.model.Diagnosis">
+    insert into diagnosis (id, answer1, answer2, 
+      answer3, answer4, answer5, 
+      answer6, answer7, answer8, 
+      answer9, answer10, answer11, 
+      answer12, answer13, answer14, 
+      answer15, answer16, answer17, 
+      answer18, answer19, answer20, 
+      answer21, answer22, answer23, 
+      answer24, answer25, answer26, 
+      answer27, answer28, answer29, 
+      answer30, answer31, answer32, 
+      answer33, answer34, answer35, 
+      answer36, answer37, answer38, 
+      answer39, answer40, answer41, 
+      answer42, answer43, answer44, 
+      answer45, answer46, answer47, 
+      answer48, answer49)
+    values (#{id,jdbcType=INTEGER}, #{answer1,jdbcType=VARCHAR}, #{answer2,jdbcType=VARCHAR}, 
+      #{answer3,jdbcType=VARCHAR}, #{answer4,jdbcType=VARCHAR}, #{answer5,jdbcType=VARCHAR}, 
+      #{answer6,jdbcType=VARCHAR}, #{answer7,jdbcType=VARCHAR}, #{answer8,jdbcType=VARCHAR}, 
+      #{answer9,jdbcType=VARCHAR}, #{answer10,jdbcType=VARCHAR}, #{answer11,jdbcType=VARCHAR}, 
+      #{answer12,jdbcType=VARCHAR}, #{answer13,jdbcType=VARCHAR}, #{answer14,jdbcType=VARCHAR}, 
+      #{answer15,jdbcType=VARCHAR}, #{answer16,jdbcType=VARCHAR}, #{answer17,jdbcType=VARCHAR}, 
+      #{answer18,jdbcType=VARCHAR}, #{answer19,jdbcType=VARCHAR}, #{answer20,jdbcType=VARCHAR}, 
+      #{answer21,jdbcType=VARCHAR}, #{answer22,jdbcType=VARCHAR}, #{answer23,jdbcType=VARCHAR}, 
+      #{answer24,jdbcType=VARCHAR}, #{answer25,jdbcType=VARCHAR}, #{answer26,jdbcType=VARCHAR}, 
+      #{answer27,jdbcType=VARCHAR}, #{answer28,jdbcType=VARCHAR}, #{answer29,jdbcType=VARCHAR}, 
+      #{answer30,jdbcType=VARCHAR}, #{answer31,jdbcType=VARCHAR}, #{answer32,jdbcType=VARCHAR}, 
+      #{answer33,jdbcType=VARCHAR}, #{answer34,jdbcType=VARCHAR}, #{answer35,jdbcType=VARCHAR}, 
+      #{answer36,jdbcType=VARCHAR}, #{answer37,jdbcType=VARCHAR}, #{answer38,jdbcType=VARCHAR}, 
+      #{answer39,jdbcType=VARCHAR}, #{answer40,jdbcType=VARCHAR}, #{answer41,jdbcType=VARCHAR}, 
+      #{answer42,jdbcType=VARCHAR}, #{answer43,jdbcType=VARCHAR}, #{answer44,jdbcType=VARCHAR}, 
+      #{answer45,jdbcType=VARCHAR}, #{answer46,jdbcType=VARCHAR}, #{answer47,jdbcType=VARCHAR}, 
+      #{answer48,jdbcType=VARCHAR}, #{answer49,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tcm.diagnosis.model.Diagnosis">
+    insert into diagnosis
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="answer1 != null">
+        answer1,
+      </if>
+      <if test="answer2 != null">
+        answer2,
+      </if>
+      <if test="answer3 != null">
+        answer3,
+      </if>
+      <if test="answer4 != null">
+        answer4,
+      </if>
+      <if test="answer5 != null">
+        answer5,
+      </if>
+      <if test="answer6 != null">
+        answer6,
+      </if>
+      <if test="answer7 != null">
+        answer7,
+      </if>
+      <if test="answer8 != null">
+        answer8,
+      </if>
+      <if test="answer9 != null">
+        answer9,
+      </if>
+      <if test="answer10 != null">
+        answer10,
+      </if>
+      <if test="answer11 != null">
+        answer11,
+      </if>
+      <if test="answer12 != null">
+        answer12,
+      </if>
+      <if test="answer13 != null">
+        answer13,
+      </if>
+      <if test="answer14 != null">
+        answer14,
+      </if>
+      <if test="answer15 != null">
+        answer15,
+      </if>
+      <if test="answer16 != null">
+        answer16,
+      </if>
+      <if test="answer17 != null">
+        answer17,
+      </if>
+      <if test="answer18 != null">
+        answer18,
+      </if>
+      <if test="answer19 != null">
+        answer19,
+      </if>
+      <if test="answer20 != null">
+        answer20,
+      </if>
+      <if test="answer21 != null">
+        answer21,
+      </if>
+      <if test="answer22 != null">
+        answer22,
+      </if>
+      <if test="answer23 != null">
+        answer23,
+      </if>
+      <if test="answer24 != null">
+        answer24,
+      </if>
+      <if test="answer25 != null">
+        answer25,
+      </if>
+      <if test="answer26 != null">
+        answer26,
+      </if>
+      <if test="answer27 != null">
+        answer27,
+      </if>
+      <if test="answer28 != null">
+        answer28,
+      </if>
+      <if test="answer29 != null">
+        answer29,
+      </if>
+      <if test="answer30 != null">
+        answer30,
+      </if>
+      <if test="answer31 != null">
+        answer31,
+      </if>
+      <if test="answer32 != null">
+        answer32,
+      </if>
+      <if test="answer33 != null">
+        answer33,
+      </if>
+      <if test="answer34 != null">
+        answer34,
+      </if>
+      <if test="answer35 != null">
+        answer35,
+      </if>
+      <if test="answer36 != null">
+        answer36,
+      </if>
+      <if test="answer37 != null">
+        answer37,
+      </if>
+      <if test="answer38 != null">
+        answer38,
+      </if>
+      <if test="answer39 != null">
+        answer39,
+      </if>
+      <if test="answer40 != null">
+        answer40,
+      </if>
+      <if test="answer41 != null">
+        answer41,
+      </if>
+      <if test="answer42 != null">
+        answer42,
+      </if>
+      <if test="answer43 != null">
+        answer43,
+      </if>
+      <if test="answer44 != null">
+        answer44,
+      </if>
+      <if test="answer45 != null">
+        answer45,
+      </if>
+      <if test="answer46 != null">
+        answer46,
+      </if>
+      <if test="answer47 != null">
+        answer47,
+      </if>
+      <if test="answer48 != null">
+        answer48,
+      </if>
+      <if test="answer49 != null">
+        answer49,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="answer1 != null">
+        #{answer1,jdbcType=VARCHAR},
+      </if>
+      <if test="answer2 != null">
+        #{answer2,jdbcType=VARCHAR},
+      </if>
+      <if test="answer3 != null">
+        #{answer3,jdbcType=VARCHAR},
+      </if>
+      <if test="answer4 != null">
+        #{answer4,jdbcType=VARCHAR},
+      </if>
+      <if test="answer5 != null">
+        #{answer5,jdbcType=VARCHAR},
+      </if>
+      <if test="answer6 != null">
+        #{answer6,jdbcType=VARCHAR},
+      </if>
+      <if test="answer7 != null">
+        #{answer7,jdbcType=VARCHAR},
+      </if>
+      <if test="answer8 != null">
+        #{answer8,jdbcType=VARCHAR},
+      </if>
+      <if test="answer9 != null">
+        #{answer9,jdbcType=VARCHAR},
+      </if>
+      <if test="answer10 != null">
+        #{answer10,jdbcType=VARCHAR},
+      </if>
+      <if test="answer11 != null">
+        #{answer11,jdbcType=VARCHAR},
+      </if>
+      <if test="answer12 != null">
+        #{answer12,jdbcType=VARCHAR},
+      </if>
+      <if test="answer13 != null">
+        #{answer13,jdbcType=VARCHAR},
+      </if>
+      <if test="answer14 != null">
+        #{answer14,jdbcType=VARCHAR},
+      </if>
+      <if test="answer15 != null">
+        #{answer15,jdbcType=VARCHAR},
+      </if>
+      <if test="answer16 != null">
+        #{answer16,jdbcType=VARCHAR},
+      </if>
+      <if test="answer17 != null">
+        #{answer17,jdbcType=VARCHAR},
+      </if>
+      <if test="answer18 != null">
+        #{answer18,jdbcType=VARCHAR},
+      </if>
+      <if test="answer19 != null">
+        #{answer19,jdbcType=VARCHAR},
+      </if>
+      <if test="answer20 != null">
+        #{answer20,jdbcType=VARCHAR},
+      </if>
+      <if test="answer21 != null">
+        #{answer21,jdbcType=VARCHAR},
+      </if>
+      <if test="answer22 != null">
+        #{answer22,jdbcType=VARCHAR},
+      </if>
+      <if test="answer23 != null">
+        #{answer23,jdbcType=VARCHAR},
+      </if>
+      <if test="answer24 != null">
+        #{answer24,jdbcType=VARCHAR},
+      </if>
+      <if test="answer25 != null">
+        #{answer25,jdbcType=VARCHAR},
+      </if>
+      <if test="answer26 != null">
+        #{answer26,jdbcType=VARCHAR},
+      </if>
+      <if test="answer27 != null">
+        #{answer27,jdbcType=VARCHAR},
+      </if>
+      <if test="answer28 != null">
+        #{answer28,jdbcType=VARCHAR},
+      </if>
+      <if test="answer29 != null">
+        #{answer29,jdbcType=VARCHAR},
+      </if>
+      <if test="answer30 != null">
+        #{answer30,jdbcType=VARCHAR},
+      </if>
+      <if test="answer31 != null">
+        #{answer31,jdbcType=VARCHAR},
+      </if>
+      <if test="answer32 != null">
+        #{answer32,jdbcType=VARCHAR},
+      </if>
+      <if test="answer33 != null">
+        #{answer33,jdbcType=VARCHAR},
+      </if>
+      <if test="answer34 != null">
+        #{answer34,jdbcType=VARCHAR},
+      </if>
+      <if test="answer35 != null">
+        #{answer35,jdbcType=VARCHAR},
+      </if>
+      <if test="answer36 != null">
+        #{answer36,jdbcType=VARCHAR},
+      </if>
+      <if test="answer37 != null">
+        #{answer37,jdbcType=VARCHAR},
+      </if>
+      <if test="answer38 != null">
+        #{answer38,jdbcType=VARCHAR},
+      </if>
+      <if test="answer39 != null">
+        #{answer39,jdbcType=VARCHAR},
+      </if>
+      <if test="answer40 != null">
+        #{answer40,jdbcType=VARCHAR},
+      </if>
+      <if test="answer41 != null">
+        #{answer41,jdbcType=VARCHAR},
+      </if>
+      <if test="answer42 != null">
+        #{answer42,jdbcType=VARCHAR},
+      </if>
+      <if test="answer43 != null">
+        #{answer43,jdbcType=VARCHAR},
+      </if>
+      <if test="answer44 != null">
+        #{answer44,jdbcType=VARCHAR},
+      </if>
+      <if test="answer45 != null">
+        #{answer45,jdbcType=VARCHAR},
+      </if>
+      <if test="answer46 != null">
+        #{answer46,jdbcType=VARCHAR},
+      </if>
+      <if test="answer47 != null">
+        #{answer47,jdbcType=VARCHAR},
+      </if>
+      <if test="answer48 != null">
+        #{answer48,jdbcType=VARCHAR},
+      </if>
+      <if test="answer49 != null">
+        #{answer49,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tcm.diagnosis.model.Diagnosis">
+    update diagnosis
+    <set>
+      <if test="answer1 != null">
+        answer1 = #{answer1,jdbcType=VARCHAR},
+      </if>
+      <if test="answer2 != null">
+        answer2 = #{answer2,jdbcType=VARCHAR},
+      </if>
+      <if test="answer3 != null">
+        answer3 = #{answer3,jdbcType=VARCHAR},
+      </if>
+      <if test="answer4 != null">
+        answer4 = #{answer4,jdbcType=VARCHAR},
+      </if>
+      <if test="answer5 != null">
+        answer5 = #{answer5,jdbcType=VARCHAR},
+      </if>
+      <if test="answer6 != null">
+        answer6 = #{answer6,jdbcType=VARCHAR},
+      </if>
+      <if test="answer7 != null">
+        answer7 = #{answer7,jdbcType=VARCHAR},
+      </if>
+      <if test="answer8 != null">
+        answer8 = #{answer8,jdbcType=VARCHAR},
+      </if>
+      <if test="answer9 != null">
+        answer9 = #{answer9,jdbcType=VARCHAR},
+      </if>
+      <if test="answer10 != null">
+        answer10 = #{answer10,jdbcType=VARCHAR},
+      </if>
+      <if test="answer11 != null">
+        answer11 = #{answer11,jdbcType=VARCHAR},
+      </if>
+      <if test="answer12 != null">
+        answer12 = #{answer12,jdbcType=VARCHAR},
+      </if>
+      <if test="answer13 != null">
+        answer13 = #{answer13,jdbcType=VARCHAR},
+      </if>
+      <if test="answer14 != null">
+        answer14 = #{answer14,jdbcType=VARCHAR},
+      </if>
+      <if test="answer15 != null">
+        answer15 = #{answer15,jdbcType=VARCHAR},
+      </if>
+      <if test="answer16 != null">
+        answer16 = #{answer16,jdbcType=VARCHAR},
+      </if>
+      <if test="answer17 != null">
+        answer17 = #{answer17,jdbcType=VARCHAR},
+      </if>
+      <if test="answer18 != null">
+        answer18 = #{answer18,jdbcType=VARCHAR},
+      </if>
+      <if test="answer19 != null">
+        answer19 = #{answer19,jdbcType=VARCHAR},
+      </if>
+      <if test="answer20 != null">
+        answer20 = #{answer20,jdbcType=VARCHAR},
+      </if>
+      <if test="answer21 != null">
+        answer21 = #{answer21,jdbcType=VARCHAR},
+      </if>
+      <if test="answer22 != null">
+        answer22 = #{answer22,jdbcType=VARCHAR},
+      </if>
+      <if test="answer23 != null">
+        answer23 = #{answer23,jdbcType=VARCHAR},
+      </if>
+      <if test="answer24 != null">
+        answer24 = #{answer24,jdbcType=VARCHAR},
+      </if>
+      <if test="answer25 != null">
+        answer25 = #{answer25,jdbcType=VARCHAR},
+      </if>
+      <if test="answer26 != null">
+        answer26 = #{answer26,jdbcType=VARCHAR},
+      </if>
+      <if test="answer27 != null">
+        answer27 = #{answer27,jdbcType=VARCHAR},
+      </if>
+      <if test="answer28 != null">
+        answer28 = #{answer28,jdbcType=VARCHAR},
+      </if>
+      <if test="answer29 != null">
+        answer29 = #{answer29,jdbcType=VARCHAR},
+      </if>
+      <if test="answer30 != null">
+        answer30 = #{answer30,jdbcType=VARCHAR},
+      </if>
+      <if test="answer31 != null">
+        answer31 = #{answer31,jdbcType=VARCHAR},
+      </if>
+      <if test="answer32 != null">
+        answer32 = #{answer32,jdbcType=VARCHAR},
+      </if>
+      <if test="answer33 != null">
+        answer33 = #{answer33,jdbcType=VARCHAR},
+      </if>
+      <if test="answer34 != null">
+        answer34 = #{answer34,jdbcType=VARCHAR},
+      </if>
+      <if test="answer35 != null">
+        answer35 = #{answer35,jdbcType=VARCHAR},
+      </if>
+      <if test="answer36 != null">
+        answer36 = #{answer36,jdbcType=VARCHAR},
+      </if>
+      <if test="answer37 != null">
+        answer37 = #{answer37,jdbcType=VARCHAR},
+      </if>
+      <if test="answer38 != null">
+        answer38 = #{answer38,jdbcType=VARCHAR},
+      </if>
+      <if test="answer39 != null">
+        answer39 = #{answer39,jdbcType=VARCHAR},
+      </if>
+      <if test="answer40 != null">
+        answer40 = #{answer40,jdbcType=VARCHAR},
+      </if>
+      <if test="answer41 != null">
+        answer41 = #{answer41,jdbcType=VARCHAR},
+      </if>
+      <if test="answer42 != null">
+        answer42 = #{answer42,jdbcType=VARCHAR},
+      </if>
+      <if test="answer43 != null">
+        answer43 = #{answer43,jdbcType=VARCHAR},
+      </if>
+      <if test="answer44 != null">
+        answer44 = #{answer44,jdbcType=VARCHAR},
+      </if>
+      <if test="answer45 != null">
+        answer45 = #{answer45,jdbcType=VARCHAR},
+      </if>
+      <if test="answer46 != null">
+        answer46 = #{answer46,jdbcType=VARCHAR},
+      </if>
+      <if test="answer47 != null">
+        answer47 = #{answer47,jdbcType=VARCHAR},
+      </if>
+      <if test="answer48 != null">
+        answer48 = #{answer48,jdbcType=VARCHAR},
+      </if>
+      <if test="answer49 != null">
+        answer49 = #{answer49,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tcm.diagnosis.model.Diagnosis">
+    update diagnosis
+    set answer1 = #{answer1,jdbcType=VARCHAR},
+      answer2 = #{answer2,jdbcType=VARCHAR},
+      answer3 = #{answer3,jdbcType=VARCHAR},
+      answer4 = #{answer4,jdbcType=VARCHAR},
+      answer5 = #{answer5,jdbcType=VARCHAR},
+      answer6 = #{answer6,jdbcType=VARCHAR},
+      answer7 = #{answer7,jdbcType=VARCHAR},
+      answer8 = #{answer8,jdbcType=VARCHAR},
+      answer9 = #{answer9,jdbcType=VARCHAR},
+      answer10 = #{answer10,jdbcType=VARCHAR},
+      answer11 = #{answer11,jdbcType=VARCHAR},
+      answer12 = #{answer12,jdbcType=VARCHAR},
+      answer13 = #{answer13,jdbcType=VARCHAR},
+      answer14 = #{answer14,jdbcType=VARCHAR},
+      answer15 = #{answer15,jdbcType=VARCHAR},
+      answer16 = #{answer16,jdbcType=VARCHAR},
+      answer17 = #{answer17,jdbcType=VARCHAR},
+      answer18 = #{answer18,jdbcType=VARCHAR},
+      answer19 = #{answer19,jdbcType=VARCHAR},
+      answer20 = #{answer20,jdbcType=VARCHAR},
+      answer21 = #{answer21,jdbcType=VARCHAR},
+      answer22 = #{answer22,jdbcType=VARCHAR},
+      answer23 = #{answer23,jdbcType=VARCHAR},
+      answer24 = #{answer24,jdbcType=VARCHAR},
+      answer25 = #{answer25,jdbcType=VARCHAR},
+      answer26 = #{answer26,jdbcType=VARCHAR},
+      answer27 = #{answer27,jdbcType=VARCHAR},
+      answer28 = #{answer28,jdbcType=VARCHAR},
+      answer29 = #{answer29,jdbcType=VARCHAR},
+      answer30 = #{answer30,jdbcType=VARCHAR},
+      answer31 = #{answer31,jdbcType=VARCHAR},
+      answer32 = #{answer32,jdbcType=VARCHAR},
+      answer33 = #{answer33,jdbcType=VARCHAR},
+      answer34 = #{answer34,jdbcType=VARCHAR},
+      answer35 = #{answer35,jdbcType=VARCHAR},
+      answer36 = #{answer36,jdbcType=VARCHAR},
+      answer37 = #{answer37,jdbcType=VARCHAR},
+      answer38 = #{answer38,jdbcType=VARCHAR},
+      answer39 = #{answer39,jdbcType=VARCHAR},
+      answer40 = #{answer40,jdbcType=VARCHAR},
+      answer41 = #{answer41,jdbcType=VARCHAR},
+      answer42 = #{answer42,jdbcType=VARCHAR},
+      answer43 = #{answer43,jdbcType=VARCHAR},
+      answer44 = #{answer44,jdbcType=VARCHAR},
+      answer45 = #{answer45,jdbcType=VARCHAR},
+      answer46 = #{answer46,jdbcType=VARCHAR},
+      answer47 = #{answer47,jdbcType=VARCHAR},
+      answer48 = #{answer48,jdbcType=VARCHAR},
+      answer49 = #{answer49,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+
+</mapper>
